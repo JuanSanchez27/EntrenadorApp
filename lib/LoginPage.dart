@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class LoginPage extends StatefulWidget{
   static String id = 'LoginPage';
@@ -44,11 +45,13 @@ class _LoginPageState extends State<LoginPage> {
                       Text("Bienvenido",
                         style: TextStyle(
                           fontSize: 40.0,
+                          fontFamily: "Nunito-ExtraBold",
                         ),
                       ),
                       Text("Por favor inicie sesión para continuar",
                         style: TextStyle(
                           fontSize: 20.0,
+                          fontFamily: "Nunito-Regular",
                         ),
                       ),
                       SizedBox(
@@ -69,6 +72,9 @@ class _LoginPageState extends State<LoginPage> {
                           child: Text("entrar"),
                           style: ElevatedButton.styleFrom(
                             primary: Colors.teal.shade600,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(100.0),
+                            ),
                           ),
                         ),
                       )
@@ -98,16 +104,32 @@ Widget _textFieldUsername() {
 }
 
 Widget _textFieldPass() {
-  return Container(
-    width: 300.0,
-    child: TextFormField(
-        obscureText: true,
-        decoration: InputDecoration(
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      Container(
+        width: 60.0,
+        height: 60.0,
+        decoration: BoxDecoration(
+          color: Colors.blueAccent,
+          borderRadius: BorderRadius.circular(100.0),
+        ),
+        child: Icon(FontAwesomeIcons.key,
+                    color: Colors.white,
+                    ),
+      ),
+      Container(
+        width: 250.0,
+        child: TextFormField(
+          obscureText: true,
+          decoration: InputDecoration(
             hintText: "contraseña",
             border: OutlineInputBorder(
               borderRadius: BorderRadius.circular(100.0),
-            )
-        )
-    ),
+            ),
+          )
+        ),
+      ),
+    ],
   );
 }
