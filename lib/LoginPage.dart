@@ -1,3 +1,4 @@
+import 'package:entrenador_app/DashboardPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -68,7 +69,13 @@ class _LoginPageState extends State<LoginPage> {
                       Container(
                         width: 300.0,
                         child: ElevatedButton(
-                          onPressed: (){},
+                          onPressed: (){
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                  builder: (context) => DashboardPage()
+                              )
+                            );
+                          },
                           child: Text("entrar"),
                           style: ElevatedButton.styleFrom(
                             primary: Colors.teal.shade600,
