@@ -131,9 +131,7 @@ Widget _textFieldPass() {
           obscureText: true,
           decoration: InputDecoration(
             hintText: "contraseña",
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(100.0),
-            ),
+
           )
         ),
       ),

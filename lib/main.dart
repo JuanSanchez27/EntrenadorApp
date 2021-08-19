@@ -1,5 +1,6 @@
 import 'package:entrenador_app/DashboardPage.dart';
 import 'package:entrenador_app/LoginPage.dart';
+import 'package:entrenador_app/YourTestPage.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -23,6 +24,7 @@ class MyApp extends StatelessWidget {
       routes: {
         LoginPage.id : (context) => LoginPage(),
         DashboardPage.id : (context) => DashboardPage(),
+        YourTestPage.id : (context)=>YourTestPage(),
       },
     );
   }
