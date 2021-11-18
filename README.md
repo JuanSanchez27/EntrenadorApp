@@ -1,6 +1,6 @@
 # entrenador_app
 
-Aplicación móbil de Entrenador (SaberPro)
+Aplicación móvil de Entrenador (SaberPro)
 
 ## Getting Started
 
